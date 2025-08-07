@@ -86,25 +86,25 @@ namespace cryptonote {
     const int target_minutes = target / 60;
     
     // Privox custom reward schedule:
-    // - Initial block reward: 120 PVX (12000000000 atomic units, 8 decimals)
+    // - Initial block reward: 120 PVX (120000000 atomic units, 6 decimals)
     // - Halving every 2,102,400 blocks (~4 years with 2-minute blocks)
-    // - Tail emission: 1 PVX (100000000 atomic units) after 490M PVX emitted
+    // - Tail emission: 1 PVX (1000000 atomic units) after 490M PVX emitted
     
     // Check if this is the genesis block (for premine)
     if (already_generated_coins == 0) {
-      // Privōx genesis block with 10M PVX premine (1000000000000000 atomic units, 8 decimals)
-      uint64_t base_reward = 1000000000000000ULL; // 10M PVX * 10^8
+      // Privōx genesis block with 10M PVX premine (6 decimals)
+      uint64_t base_reward = UINT64_C(10000000000000); // 10M PVX * 1e6 = 1e13 atomic units
       reward = base_reward;
       return true;
     }
     
     // Calculate which halving period we're in
     uint64_t halving_period = 2102400; // ~4 years with 2-minute blocks
-    uint64_t current_block_height = already_generated_coins / 12000000000ULL; // Approximate height based on emission (120 PVX * 10^8)
+    uint64_t current_block_height = already_generated_coins / 120000000ULL; // Approximate height based on emission (120 PVX * 1e6)
     uint64_t halvings = current_block_height / halving_period;
     
     // Initial block reward (120 PVX)
-    uint64_t base_reward = 12000000000ULL; // 120 * 10^8
+    uint64_t base_reward = 120000000ULL; // 120 PVX * 1e6
     
     // Apply halvings
     for (uint64_t i = 0; i < halvings && i < 64; i++) {
@@ -112,8 +112,8 @@ namespace cryptonote {
     }
     
     // Tail emission of 1 PVX after 490M coins emitted
-    if (already_generated_coins >= 490000000000000000ULL) { // 490M * 10^8
-      base_reward = 100000000ULL; // 1 PVX tail emission (10^8)
+    if (already_generated_coins >= UINT64_C(490000000000000)) { // 490M PVX * 1e6
+      base_reward = 1000000ULL; // 1 PVX tail emission (1e6)
     }
 
     uint64_t full_reward_zone = get_min_block_weight(version);

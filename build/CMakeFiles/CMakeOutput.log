@@ -1396,3 +1396,131 @@ gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScr
 Source file was:
 int main() { return 0; }
 
+Performing C++ SOURCE FILE Test _march=native_cxx succeeded with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-Zi8QQL
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_89d8b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_89d8b.dir/build.make CMakeFiles/cmTC_89d8b.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-Zi8QQL'
+Building CXX object CMakeFiles/cmTC_89d8b.dir/src.cxx.o
+/usr/bin/c++ -D_march=native_cxx  -pthread    -march=native -o CMakeFiles/cmTC_89d8b.dir/src.cxx.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-Zi8QQL/src.cxx
+Linking CXX executable cmTC_89d8b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89d8b.dir/link.txt --verbose=1
+/usr/bin/c++  -pthread  CMakeFiles/cmTC_89d8b.dir/src.cxx.o -o cmTC_89d8b 
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-Zi8QQL'
+
+
+Source file was:
+int main() { return 0; }
+
+Performing C SOURCE FILE Test _march=native_c succeeded with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-0Qym3n
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1b684/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1b684.dir/build.make CMakeFiles/cmTC_1b684.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-0Qym3n'
+Building C object CMakeFiles/cmTC_1b684.dir/src.c.o
+/usr/bin/cc -D_march=native_c  -pthread    -march=native -o CMakeFiles/cmTC_1b684.dir/src.c.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-0Qym3n/src.c
+Linking C executable cmTC_1b684
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b684.dir/link.txt --verbose=1
+/usr/bin/cc  -pthread  CMakeFiles/cmTC_1b684.dir/src.c.o -o cmTC_1b684 
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-0Qym3n'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test _Werror__fcf_protection=full_c succeeded with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-48uHu9
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ad3cd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ad3cd.dir/build.make CMakeFiles/cmTC_ad3cd.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-48uHu9'
+Building C object CMakeFiles/cmTC_ad3cd.dir/src.c.o
+/usr/bin/cc -D_Werror__fcf_protection=full_c -I/usr/include/libusb-1.0 -pthread -maes -march=native -fno-strict-aliasing    -Werror -fcf-protection=full -o CMakeFiles/cmTC_ad3cd.dir/src.c.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-48uHu9/src.c
+Linking C executable cmTC_ad3cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad3cd.dir/link.txt --verbose=1
+/usr/bin/cc  -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_ad3cd.dir/src.c.o -o cmTC_ad3cd  /usr/lib/x86_64-linux-gnu/libusb-1.0.so 
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-48uHu9'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test _Werror__fcf_protection=full_cxx succeeded with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-tG9civ
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a4879/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a4879.dir/build.make CMakeFiles/cmTC_a4879.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-tG9civ'
+Building CXX object CMakeFiles/cmTC_a4879.dir/src.cxx.o
+/usr/bin/c++ -D_Werror__fcf_protection=full_cxx -I/usr/include/libusb-1.0 -pthread -maes -march=native -fno-strict-aliasing    -Werror -fcf-protection=full -o CMakeFiles/cmTC_a4879.dir/src.cxx.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-tG9civ/src.cxx
+Linking CXX executable cmTC_a4879
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4879.dir/link.txt --verbose=1
+/usr/bin/c++  -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_a4879.dir/src.cxx.o -o cmTC_a4879  /usr/lib/x86_64-linux-gnu/libusb-1.0.so 
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-tG9civ'
+
+
+Source file was:
+int main() { return 0; }
+
+Performing C SOURCE FILE Test _Werror__Werror=switch_c succeeded with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-DEeYAY
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f6388/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f6388.dir/build.make CMakeFiles/cmTC_f6388.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-DEeYAY'
+Building C object CMakeFiles/cmTC_f6388.dir/src.c.o
+/usr/bin/cc -D_Werror__Werror=switch_c -I/usr/include/libusb-1.0 -pthread -maes -march=native -fno-strict-aliasing    -Werror -Werror=switch -o CMakeFiles/cmTC_f6388.dir/src.c.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-DEeYAY/src.c
+Linking C executable cmTC_f6388
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6388.dir/link.txt --verbose=1
+/usr/bin/cc  -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_f6388.dir/src.c.o -o cmTC_f6388  /usr/lib/x86_64-linux-gnu/libusb-1.0.so 
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-DEeYAY'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test _Werror__Werror=switch_cxx succeeded with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-ONhSYS
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4978a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4978a.dir/build.make CMakeFiles/cmTC_4978a.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-ONhSYS'
+Building CXX object CMakeFiles/cmTC_4978a.dir/src.cxx.o
+/usr/bin/c++ -D_Werror__Werror=switch_cxx -I/usr/include/libusb-1.0 -pthread -maes -march=native -fno-strict-aliasing    -Werror -Werror=switch -o CMakeFiles/cmTC_4978a.dir/src.cxx.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-ONhSYS/src.cxx
+Linking CXX executable cmTC_4978a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4978a.dir/link.txt --verbose=1
+/usr/bin/c++  -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_4978a.dir/src.cxx.o -o cmTC_4978a  /usr/lib/x86_64-linux-gnu/libusb-1.0.so 
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-ONhSYS'
+
+
+Source file was:
+int main() { return 0; }
+
+Performing C SOURCE FILE Test _Werror__Werror=return_type_c succeeded with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-4sPlzN
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9d320/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9d320.dir/build.make CMakeFiles/cmTC_9d320.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-4sPlzN'
+Building C object CMakeFiles/cmTC_9d320.dir/src.c.o
+/usr/bin/cc -D_Werror__Werror=return_type_c -I/usr/include/libusb-1.0 -pthread -maes -march=native -fno-strict-aliasing    -Werror -Werror=return-type -o CMakeFiles/cmTC_9d320.dir/src.c.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-4sPlzN/src.c
+Linking C executable cmTC_9d320
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d320.dir/link.txt --verbose=1
+/usr/bin/cc  -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_9d320.dir/src.c.o -o cmTC_9d320  /usr/lib/x86_64-linux-gnu/libusb-1.0.so 
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-4sPlzN'
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test _Werror__Werror=return_type_cxx succeeded with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-TLHjc0
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_deb7b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_deb7b.dir/build.make CMakeFiles/cmTC_deb7b.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-TLHjc0'
+Building CXX object CMakeFiles/cmTC_deb7b.dir/src.cxx.o
+/usr/bin/c++ -D_Werror__Werror=return_type_cxx -I/usr/include/libusb-1.0 -pthread -maes -march=native -fno-strict-aliasing    -Werror -Werror=return-type -o CMakeFiles/cmTC_deb7b.dir/src.cxx.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-TLHjc0/src.cxx
+Linking CXX executable cmTC_deb7b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_deb7b.dir/link.txt --verbose=1
+/usr/bin/c++  -pthread -maes -march=native -fno-strict-aliasing  CMakeFiles/cmTC_deb7b.dir/src.cxx.o -o cmTC_deb7b  /usr/lib/x86_64-linux-gnu/libusb-1.0.so 
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-TLHjc0'
+
+
+Source file was:
+int main() { return 0; }
+
