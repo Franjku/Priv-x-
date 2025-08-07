@@ -660,16 +660,16 @@ namespace cryptonote
       transaction& miner_tx = bl.miner_tx;
       miner_tx = {};
       miner_tx.version = 1;
-      miner_tx.unlock_time = 0;
+      miner_tx.unlock_time = 60; // Set unlock time to expected value
       
       // Create coinbase input
       txin_gen coinbase_input;
       coinbase_input.height = 0;
       miner_tx.vin.push_back(coinbase_input);
       
-      // Create output with 10M PVX premine (1000000000000000 atomic units, 8 decimals)
+      // Create output with 10M PVX premine (6 decimals)
       tx_out genesis_output;
-      genesis_output.amount = 1000000000000000ULL; // 10M PVX * 10^8
+      genesis_output.amount = UINT64_C(10000000000000); // 10M PVX * 1e6
       
       // Create a dummy public key for the genesis output
       crypto::public_key genesis_pub_key;
