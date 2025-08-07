@@ -1,0 +1,98 @@
+name: Build Privōx Daemon and CLI Tools
+
+on:
+  push:
+    branches: [ master, privox-mainnet, privox-testnet ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build-linux-daemon:
+    runs-on: ubuntu-20.04
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          build-essential \
+          cmake \
+          libboost-all-dev \
+          libssl-dev \
+          libzmq3-dev \
+          libunbound-dev \
+          libsodium-dev \
+          libunwind8-dev \
+          liblzma-dev \
+          libreadline6-dev \
+          libldns-dev \
+          libexpat1-dev \
+          libpgm-dev \
+          libhidapi-dev \
+          libusb-1.0-0-dev \
+          libprotobuf-dev \
+          protobuf-compiler \
+          libudev-dev \
+          libgcrypt20-dev \
+          pkg-config
+          
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      
+    - name: Build Privōx
+      run: |
+        mkdir build
+        cd build
+        cmake -DCMAKE_BUILD_TYPE=Release ..
+        make -j$(nproc)
+        
+    - name: Test daemon version
+      run: |
+        cd build
+        ./bin/privoxd --version
+        
+    - name: Create release package
+      run: |
+        mkdir -p privox-linux-x64
+        cp build/bin/privoxd privox-linux-x64/
+        cp build/bin/privox-wallet-cli privox-linux-x64/
+        cp build/bin/privox-wallet-rpc privox-linux-x64/
+        cp build/bin/privox-blockchain-* privox-linux-x64/ 2>/dev/null || true
+        cp README.md privox-linux-x64/
+        cp LAUNCH_COMMANDS.md privox-linux-x64/
+        cp DEPLOYMENT_READY.md privox-linux-x64/
+        
+        # Create quick start script
+        cat > privox-linux-x64/start-mainnet.sh << 'EOF'
+#!/bin/bash
+echo "Starting Privōx Mainnet Daemon..."
+echo "RPC Port: 18236, P2P Port: 17236"
+echo "Press Ctrl+C to stop"
+./privoxd --rpc-bind-port 18236 --p2p-bind-port 17236 --confirm-external-bind
+EOF
+        
+        cat > privox-linux-x64/start-testnet.sh << 'EOF'
+#!/bin/bash
+echo "Starting Privōx Testnet Daemon..."
+echo "RPC Port: 28236, P2P Port: 27236"
+echo "Press Ctrl+C to stop"
+./privoxd --testnet --rpc-bind-port 28236 --p2p-bind-port 27236 --confirm-external-bind
+EOF
+        
+        chmod +x privox-linux-x64/start-mainnet.sh
+        chmod +x privox-linux-x64/start-testnet.sh
+        
+        tar -czf privox-linux-x64.tar.gz privox-linux-x64/
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: privox-linux-x64
+        path: privox-linux-x64.tar.gz
+        retention-days: 30
