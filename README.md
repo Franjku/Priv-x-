@@ -16,7 +16,7 @@ Privōx is a privacy-focused cryptocurrency forked from Monero, designed to prov
 - **Block Time**: 2 minutes
 - **Block Reward**: 120 PVX, halving every 2,102,400 blocks (~4 years)
 - **Tail Emission**: 1 PVX after 490M coins emitted
-- **Decimal Places**: 12
+- **Decimal Places**: 6
 - **Premine**: 10 million PVX (2% of total supply)
 
 ## Premine Allocation
