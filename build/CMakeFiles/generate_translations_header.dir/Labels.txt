@@ -1,0 +1,13 @@
+# Target labels
+ generate_translations_header
+# Source files and their labels
+/workspace/project/privox/build/CMakeFiles/generate_translations_header
+/workspace/project/privox/build/CMakeFiles/generate_translations_header.rule
+/workspace/project/privox/build/CMakeFiles/generate_translations_header-complete.rule
+/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-build.rule
+/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-configure.rule
+/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-download.rule
+/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-install.rule
+/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-mkdir.rule
+/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-patch.rule
+/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-update.rule

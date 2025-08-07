@@ -1,0 +1,68 @@
+Determining if the function memset_s exists in the c failed with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-iK0XZq
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cffc5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cffc5.dir/build.make CMakeFiles/cmTC_cffc5.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-iK0XZq'
+Building C object CMakeFiles/cmTC_cffc5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -pthread -DCHECK_FUNCTION_EXISTS=memset_s -o CMakeFiles/cmTC_cffc5.dir/CheckFunctionExists.c.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-iK0XZq/CheckFunctionExists.c
+Linking C executable cmTC_cffc5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cffc5.dir/link.txt --verbose=1
+/usr/bin/cc  -pthread -DCHECK_FUNCTION_EXISTS=memset_s CMakeFiles/cmTC_cffc5.dir/CheckFunctionExists.c.o -o cmTC_cffc5   -L/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-iK0XZq/string.h  -Wl,-rpath,/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-iK0XZq/string.h -lc 
+/usr/bin/ld: CMakeFiles/cmTC_cffc5.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `memset_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_cffc5.dir/build.make:99: cmTC_cffc5] Error 1
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-iK0XZq'
+gmake: *** [Makefile:127: cmTC_cffc5/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test _Werror__Wformat_security_c failed with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-bARpkK
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fda82/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fda82.dir/build.make CMakeFiles/cmTC_fda82.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-bARpkK'
+Building C object CMakeFiles/cmTC_fda82.dir/src.c.o
+/usr/bin/cc -D_Werror__Wformat_security_c -I/usr/include/libusb-1.0 -pthread -maes -march=native -fno-strict-aliasing    -Werror -Wformat-security -o CMakeFiles/cmTC_fda82.dir/src.c.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-bARpkK/src.c
+cc1: error: '-Wformat-security' ignored without '-Wformat' [-Werror=format-security]
+cc1: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_fda82.dir/build.make:78: CMakeFiles/cmTC_fda82.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-bARpkK'
+gmake: *** [Makefile:127: cmTC_fda82/fast] Error 2
+
+
+Source file was:
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test _Werror__Wformat_security_cxx failed with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-Bv5hWi
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_02f23/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_02f23.dir/build.make CMakeFiles/cmTC_02f23.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-Bv5hWi'
+Building CXX object CMakeFiles/cmTC_02f23.dir/src.cxx.o
+/usr/bin/c++ -D_Werror__Wformat_security_cxx -I/usr/include/libusb-1.0 -pthread -maes -march=native -fno-strict-aliasing    -Werror -Wformat-security -o CMakeFiles/cmTC_02f23.dir/src.cxx.o -c /workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-Bv5hWi/src.cxx
+cc1plus: error: '-Wformat-security' ignored without '-Wformat' [-Werror=format-security]
+cc1plus: all warnings being treated as errors
+gmake[1]: *** [CMakeFiles/cmTC_02f23.dir/build.make:78: CMakeFiles/cmTC_02f23.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeScratch/TryCompile-Bv5hWi'
+gmake: *** [Makefile:127: cmTC_02f23/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+
+Determining if the -Wl,-z,noexecheap linker flag is supported failed with the following output:
+Change Dir: /workspace/project/privox/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f72a4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f72a4.dir/build.make CMakeFiles/cmTC_f72a4.dir/build
+gmake[1]: Entering directory '/workspace/project/privox/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f72a4.dir/CheckLinkerFlag.c.o
+/usr/bin/cc   -Wl,-z,noexecheap    -Wl,-z,noexecheap -o CMakeFiles/cmTC_f72a4.dir/CheckLinkerFlag.c.o -c /workspace/project/privox/cmake/CheckLinkerFlag.c
+Linking C executable cmTC_f72a4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f72a4.dir/link.txt --verbose=1
+/usr/bin/cc -Wl,-z,noexecheap  CMakeFiles/cmTC_f72a4.dir/CheckLinkerFlag.c.o -o cmTC_f72a4 
+/usr/bin/ld: warning: -z noexecheap ignored
+gmake[1]: Leaving directory '/workspace/project/privox/build/CMakeFiles/CMakeTmp'
+
+
+

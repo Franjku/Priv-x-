@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/choose_t.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/fe25519_add.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/fe25519_freeze.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/fe25519_mul.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/fe25519_square.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/fe25519_sub.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/ge25519_add_p1p1.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/ge25519_dbl_p1p1.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/ge25519_nielsadd2.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/ge25519_nielsadd_p1p1.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/ge25519_p1p1_to_p2.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/ge25519_p1p1_to_p3.s
+
+/workspace/project/privox/external/supercop/crypto_sign/ed25519/amd64-64-24k/ge25519_pnielsadd_p1p1.s
+
+/workspace/project/privox/external/supercop/src/amd64/amd64-64-24k-choose_tp.s
+

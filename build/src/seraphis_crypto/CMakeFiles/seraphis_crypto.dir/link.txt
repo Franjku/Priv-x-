@@ -1,0 +1,2 @@
+/usr/bin/ar qc libseraphis_crypto.a CMakeFiles/obj_seraphis_crypto.dir/dummy.cpp.o
+/usr/bin/ranlib libseraphis_crypto.a

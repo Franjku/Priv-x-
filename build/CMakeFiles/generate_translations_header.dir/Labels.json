@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/workspace/project/privox/build/CMakeFiles/generate_translations_header"
+		},
+		{
+			"file" : "/workspace/project/privox/build/CMakeFiles/generate_translations_header.rule"
+		},
+		{
+			"file" : "/workspace/project/privox/build/CMakeFiles/generate_translations_header-complete.rule"
+		},
+		{
+			"file" : "/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-build.rule"
+		},
+		{
+			"file" : "/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-configure.rule"
+		},
+		{
+			"file" : "/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-download.rule"
+		},
+		{
+			"file" : "/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-install.rule"
+		},
+		{
+			"file" : "/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-mkdir.rule"
+		},
+		{
+			"file" : "/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-patch.rule"
+		},
+		{
+			"file" : "/workspace/project/privox/build/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"generate_translations_header"
+		],
+		"name" : "generate_translations_header"
+	}
+}
