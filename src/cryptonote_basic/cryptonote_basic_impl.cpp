@@ -92,7 +92,7 @@ namespace cryptonote {
     
     // Check if this is the genesis block (for premine)
     if (already_generated_coins == 0) {
-      // Premine of 10M PVX in genesis block (1000000000000000 atomic units, 8 decimals)
+      // Privōx genesis block with 10M PVX premine (1000000000000000 atomic units, 8 decimals)
       uint64_t base_reward = 1000000000000000ULL; // 10M PVX * 10^8
       reward = base_reward;
       return true;

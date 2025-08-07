@@ -654,11 +654,47 @@ namespace cryptonote
     //genesis block
     bl = {};
 
-    blobdata tx_bl;
-    bool r = string_tools::parse_hexstr_to_binbuff(genesis_tx, tx_bl);
-    CHECK_AND_ASSERT_MES(r, false, "failed to parse coinbase tx from hard coded blob");
-    r = parse_and_validate_tx_from_blob(tx_bl, bl.miner_tx);
-    CHECK_AND_ASSERT_MES(r, false, "failed to parse coinbase tx from hard coded blob");
+    // Create custom Privōx genesis transaction with 10M PVX premine
+    if (genesis_tx.empty()) {
+      // Generate custom Privōx genesis transaction
+      transaction& miner_tx = bl.miner_tx;
+      miner_tx = {};
+      miner_tx.version = 1;
+      miner_tx.unlock_time = 0;
+      
+      // Create coinbase input
+      txin_gen coinbase_input;
+      coinbase_input.height = 0;
+      miner_tx.vin.push_back(coinbase_input);
+      
+      // Create output with 10M PVX premine (1000000000000000 atomic units, 8 decimals)
+      tx_out genesis_output;
+      genesis_output.amount = 1000000000000000ULL; // 10M PVX * 10^8
+      
+      // Create a dummy public key for the genesis output
+      crypto::public_key genesis_pub_key;
+      crypto::secret_key genesis_sec_key;
+      crypto::generate_keys(genesis_pub_key, genesis_sec_key);
+      
+      txout_to_key genesis_out_key;
+      genesis_out_key.key = genesis_pub_key;
+      genesis_output.target = genesis_out_key;
+      
+      miner_tx.vout.push_back(genesis_output);
+      
+      // Add extra data with genesis message
+      std::string genesis_message = "Without privacy, anonymity or expression you will never have freedom";
+      add_extra_nonce_to_tx_extra(miner_tx.extra, genesis_message);
+      
+    } else {
+      // Use provided genesis transaction (for compatibility)
+      blobdata tx_bl;
+      bool r = string_tools::parse_hexstr_to_binbuff(genesis_tx, tx_bl);
+      CHECK_AND_ASSERT_MES(r, false, "failed to parse coinbase tx from hard coded blob");
+      r = parse_and_validate_tx_from_blob(tx_bl, bl.miner_tx);
+      CHECK_AND_ASSERT_MES(r, false, "failed to parse coinbase tx from hard coded blob");
+    }
+    
     bl.major_version = CURRENT_BLOCK_MAJOR_VERSION;
     bl.minor_version = CURRENT_BLOCK_MINOR_VERSION;
     bl.timestamp = 0;

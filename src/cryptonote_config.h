@@ -233,7 +233,7 @@ namespace config
   boost::uuids::uuid const NETWORK_ID = { {
       0x50 ,0x56, 0x58, 0x21 , 0x50, 0x52 , 0x49, 0x56, 0x4F, 0x58, 0x21, 0x50, 0x56, 0x58, 0x21, 0x50
     } }; // Privox Network ID
-  std::string const GENESIS_TX = ""; // Empty genesis transaction for now
+  std::string const GENESIS_TX = ""; // Empty - will generate custom Privōx genesis with 10M PVX premine
   // Genesis block statement: "Without privacy, anonymity or expression you will never have freedom"
   uint32_t const GENESIS_NONCE = 10000;
 
@@ -277,7 +277,7 @@ namespace config
     boost::uuids::uuid const NETWORK_ID = { {
         0x54 ,0x45, 0x53, 0x54 , 0x50, 0x52 , 0x49, 0x56, 0x4F, 0x58, 0x21, 0x54, 0x45, 0x53, 0x54, 0x21
       } }; // Privox Testnet Network ID
-    std::string const GENESIS_TX = ""; // Empty genesis transaction for now
+    std::string const GENESIS_TX = ""; // Empty - will generate custom Privōx testnet genesis with 10M PVX premine
     // Genesis block statement: "Without privacy, anonymity or expression you will never have freedom"
     uint32_t const GENESIS_NONCE = 10001;
   }
